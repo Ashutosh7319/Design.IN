@@ -117,3 +117,22 @@ toggleBtn.addEventListener("click", () => {
     }
 
 });
+
+// Loading Screen Code.
+
+const loader = document.getElementById("loader");
+
+const minTime = 3000; // 1.5 seconds minimum
+const startTime = Date.now();
+
+window.addEventListener("load", () => {
+
+    const elapsedTime = Date.now() - startTime;
+
+    const remainingTime = minTime - elapsedTime;
+
+    setTimeout(() => {
+        loader.classList.add("hide");
+    }, remainingTime > 0 ? remainingTime : 0);
+
+});

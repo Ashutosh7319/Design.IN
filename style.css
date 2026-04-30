@@ -601,6 +601,126 @@ body {
     transform: scale(1.08) rotate(8deg);
 }
 
+/* Loading Screen Styling. */
+
+/* FULLSCREEN LOADER */
+#loader {
+    position: fixed;
+    inset: 0;
+
+    background: var(--bg-dark);
+    color: var(--text);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 99999;
+
+    transition: opacity .6s ease,
+        visibility .6s ease;
+}
+
+#loader.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* CONTENT */
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+
+/* BRAND TEXT */
+.loader-content h1 {
+    font-size: 36px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+
+/* LOGO */
+.loader-content .logo img {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+
+    /* subtle animation */
+    animation: logoFloat 2s ease-in-out infinite;
+}
+
+#loading-logo>img {
+    width: 90px;
+    height: 90px;
+}
+
+/* FLOAT ANIMATION */
+@keyframes logoFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* CIRCLE LOADER */
+.loader-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* base ring */
+    border: 3px solid var(--border);
+    /* dashed circle */
+    border: 3px dashed var(--text);
+    animation: spin 1s linear infinite;
+}
+
+
+/* SPIN */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* OPTIONAL GLOW (subtle premium touch) */
+.loader-circle {
+    box-shadow: 0 0 12px rgba(255, 255, 255, .08);
+}
+
+
+/* MOBILE */
+@media(max-width:768px) {
+
+    .loader-content h1 {
+        font-size: 26px;
+    }
+
+    .loader-content .logo img {
+        width: 60px;
+    }
+
+    .loader-circle {
+        width: 50px;
+        height: 50px;
+        border-width: 2px;
+    }
+
+}
+
 /* Responsive design. */
 
 @media(max-width:768px) {
@@ -609,13 +729,11 @@ body {
         z-index: 1100;
     }
 
-    .hero-text h1
-    {
+    .hero-text h1 {
         font-size: 2.8rem;
     }
 
-    .hero-text p
-    {
+    .hero-text p {
         font-size: 1.2rem;
         color: hsl(0 0% 75%);
         font-weight: 500;
@@ -642,8 +760,7 @@ body {
         border-bottom-right-radius: 17px;
     }
 
-    #nav-links a
-    {
+    #nav-links a {
         color: var(--text);
     }
 
@@ -670,5 +787,19 @@ body {
             opacity: 1;
             transform: translateY(0);
         }
+    }
+
+    .loader-content h1 {
+        font-size: 26px;
+    }
+
+    .loader-content .logo img {
+        width: 60px;
+    }
+
+    .loader-circle {
+        width: 50px;
+        height: 50px;
+        border-width: 2px;
     }
 }
