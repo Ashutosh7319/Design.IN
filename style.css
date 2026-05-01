@@ -40,7 +40,7 @@ body.light {
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     background: var(--bg);
-    color: #111;
+    /* color: #111; */
     line-height: 1.6;
 }
 
@@ -611,7 +611,6 @@ body {
 
 /* Loading Screen Styling. */
 
-/* FULLSCREEN LOADER */
 #loader {
     position: fixed;
     inset: 0;
@@ -693,21 +692,21 @@ body {
     /* dashed circle */
     border: 3px dashed var(--text);
     animation: spin 1s linear infinite;
+    box-shadow: 0 0 12px rgba(255, 255, 255, .08);
 }
 
+#loading-text
+{
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-muted);
+}
 
-/* SPIN */
 @keyframes spin {
     to {
         transform: rotate(360deg);
     }
 }
 
-
-/* OPTIONAL GLOW (subtle premium touch) */
-.loader-circle {
-    box-shadow: 0 0 12px rgba(255, 255, 255, .08);
-}
 
 
 /* Responsive design. */
