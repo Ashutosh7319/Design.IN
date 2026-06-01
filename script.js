@@ -136,3 +136,27 @@ window.addEventListener("load", () => {
     }, remainingTime > 0 ? remainingTime : 0);
 
 });
+
+// Demo Modal Logic
+
+const demoModal = document.getElementById("demo-modal");
+const demoIframe = document.getElementById("demo-iframe");
+const demoVisitBtn = document.getElementById("demo-visit-btn");
+
+function openDemoModal(url) {
+    demoIframe.src = url;
+    demoVisitBtn.href = url;
+    demoModal.style.display = "block";
+}
+
+function closeDemoModal() {
+    demoModal.style.display = "none";
+    demoIframe.src = ""; // Stop loading the iframe when closed
+}
+
+// Close modal when clicking outside of the modal content
+window.addEventListener("click", function(event) {
+    if (event.target == demoModal) {
+        closeDemoModal();
+    }
+});

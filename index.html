@@ -144,10 +144,6 @@
                     <li>Business Contact Form</li>
                     <li>Basic SEO Setup</li>
                 </ul>
-
-                <a href="demo1.html" class="demo-btn">
-                    See Demo
-                </a>
             </div>
 
 
@@ -164,10 +160,6 @@
                     <li>Mobile Optimized</li>
                     <li>SEO Ready</li>
                 </ul>
-
-                <a href="demo2.html" class="demo-btn">
-                    See Demo
-                </a>
             </div>
 
 
@@ -184,10 +176,6 @@
                     <li>Marketing Strategy</li>
                     <li>Promotional Content</li>
                 </ul>
-
-                <a href="demo3.html" class="demo-btn">
-                    See Demo
-                </a>
             </div>
 
 
@@ -204,10 +192,6 @@
                     <li>Video Shoot Support</li>
                     <li>Growth Optimization</li>
                 </ul>
-
-                <a href="demo4.html" class="demo-btn">
-                    See Demo
-                </a>
             </div>
 
 
@@ -224,10 +208,52 @@
                     <li>Advanced Animations</li>
                     <li>High-End Branding</li>
                 </ul>
+            </div>
+        </div>
+    </section>
 
-                <a href="demo5.html" class="demo-btn">
-                    See Demo
-                </a>
+    <!-- Our Demos Section -->
+    <section id="demos" class="demos-section">
+        <h2>Our Demos</h2>
+        <p class="demo-subtitle">
+            Explore some of our live project previews.
+        </p>
+        
+        <div class="demo-container">
+            <!-- Demo 1 -->
+            <div class="demo-card" onclick="openDemoModal('https://clothing-designdotin.onrender.com/')">
+                <div class="demo-image-wrapper">
+                    <img src="images/clothing_demo.png" alt="Clothing Store Demo">
+                    <div class="demo-overlay"><span class="play-icon">▶</span></div>
+                </div>
+                <h3>Clothing Store</h3>
+            </div>
+            
+            <!-- Demo 2 -->
+            <div class="demo-card" onclick="openDemoModal('https://food-designdotin.onrender.com/')">
+                <div class="demo-image-wrapper">
+                    <img src="images/food_demo.png" alt="Food Delivery Demo">
+                    <div class="demo-overlay"><span class="play-icon">▶</span></div>
+                </div>
+                <h3>Food Delivery</h3>
+            </div>
+            
+            <!-- Demo 3 -->
+            <div class="demo-card" onclick="openDemoModal('https://medical-designdotin.onrender.com/')">
+                <div class="demo-image-wrapper">
+                    <img src="images/medical_demo.png" alt="Medical Clinic Demo">
+                    <div class="demo-overlay"><span class="play-icon">▶</span></div>
+                </div>
+                <h3>Medical Clinic</h3>
+            </div>
+            
+            <!-- Demo 4 -->
+            <div class="demo-card" onclick="openDemoModal('https://travel-designdotin.onrender.com/')">
+                <div class="demo-image-wrapper">
+                    <img src="images/travel_demo.png" alt="Travel Agency Demo">
+                    <div class="demo-overlay"><span class="play-icon">▶</span></div>
+                </div>
+                <h3>Travel Agency</h3>
             </div>
         </div>
     </section>
@@ -373,6 +399,19 @@
         </div>
 
     </footer>
+
+    <!-- Demo Modal -->
+    <div id="demo-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeDemoModal()">&times;</span>
+            <div class="modal-body">
+                <div class="video-preview">
+                    <iframe id="demo-iframe" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <a id="demo-visit-btn" href="" target="_blank" class="contact-btn visit-site-btn">Visit Site</a>
+            </div>
+        </div>
+    </div>
 
     <button id="theme-toggle" class="theme-toggle">
         🌙
